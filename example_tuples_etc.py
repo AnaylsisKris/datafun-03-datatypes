@@ -46,9 +46,10 @@ tupleB = (4, 5, 6, 7, 8)
 
 # tuple concatenation
 tupleCat = tupleA + tupleB
-
+print(tupleCat)
 # tuple repetition
 tupleAThrice = tupleA * 3
+print(tupleAThrice)
 
 # TODO: Start using this f-string "syntactic sugar" for quick ouptut
 # just add space = space inside the curly braces
@@ -115,13 +116,13 @@ setB = {4, 5, 6, 7, 8}
 
 # set union
 setC = setA | setB
-
+print(f"union {setC}")
 # set intersection
 setD = setA & setB
-
+print(f"intersection {setD}")
 # set difference
 setE = setA - setB
-
+print(f"difference {setE}")
 # sets are often used to remove duplicates from a list
 # after gettin the set, convert it back to a list with list() or []
 listWords = ["apple", "banana", "apple", "pear", "banana", "orange"]

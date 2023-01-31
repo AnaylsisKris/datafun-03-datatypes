@@ -1,5 +1,11 @@
 """
-Optional bonus. See course site for details.
+
+Name: Kristen Finley
+Course: 44-608 Data Analytics Fundamentals
+Date: 30Jan2023
+Domain: Baseball
+Project: 3
+Task 7. Optional bonus. See course site for details.
 
 >>> len(longwordset1)
 415
@@ -13,13 +19,13 @@ Optional bonus. See course site for details.
 
 import doctest
 
-# read from second file and get a list of words
+# reads from Hamlet text file and gets a list of words
 
 with open("text_hamlet.txt", "r") as f1:
     text = f1.read()
     wordlist1 = text.split()  # split on whitespace
 
-# read from second file and get a list of words
+# reads from Julius Caesar text file and gets a list of words
 
 with open("text_juliuscaesar.txt", "r") as f2:
     text = f2.read()
@@ -27,44 +33,47 @@ with open("text_juliuscaesar.txt", "r") as f2:
 
 # Done with files - let the files close and the work begin
 
-# Remove duplicates by creating two sorted sets
-# hint: use sorted() to sort the list
-# hint: use set() to remove duplicates
-# name them wordset1 and wordset2
-wordset1 = set()  # TODO fix this line
-wordset2 = set()  # TODO fix this line
+# Removes duplicates by creating two sorted sets
+# uses sorted() to sort the list
+# uses set() to remove duplicates
+# names them wordset1 and wordset2
+wordset1 = set(sorted(wordlist1))
+wordset2 = set(sorted(wordlist2))
 
 
-# initialize a variable maxlen = 10
-maxlen = 1  # TODO fix this line
+# initializes a variable maxlen = 10
+maxlen = 10
 
-# use a list comprension to get a list of words longer than 10
-# for word in wordset1
-# That is:
-# in a list (e.g. square brackets)
-# say "[Give me word (for each word in wordset1)
-#      if len(word) is greater than maxlen]"
-# then convert the list to a set to we can take the intersection
-# hint: use set()
-# name them longwordset1 and longwordset2
+# uses a list comprension to get a list of words longer than 10
+# converts the list to a set to we can take the intersection
+# names them longwordset1 and longwordset2
 
-longwordset1 = set()  # TODO: fix this line
-longwordset2 = set()  # TODO: fix this line
+longwordset1 = set([word for word in wordset1 if len(word) > maxlen])
+longwordset2 = set([word for word in wordset2 if len(word) > maxlen])
 
 # find the intersection of the two sets
-# that is, the words in both longwordset1 1 & longwordset2
-# name this variable longwords
+# names this variable longwords
 longwords = longwordset1 & longwordset2
 
 # print the length of the sets and the list
-print(len(longwordset1))
-print(len(longwordset2))
-print(len(longwords))
 print()
-print(f"{sorted(longwords) = }")
+print()
+print(f"There are {len(longwordset1)} words over 10 letters long in Hamlet.")
+print()
+print(f"There are {len(longwordset2)} words over 10 letters long in Julius Caesar.")
+print()
+print(
+    f"There are {len(longwords)} words over 10 letters long that are in both Hamlet and Julius Caesar."
+)
+print()
+print(
+    f"The following are the unique words over 10 letters long in both Hamlet and Julius Caesar: {sorted(longwords) = }"
+)
 print()
 
 # check your work
 print("TESTING...if nothing prints before the testing is done, you passed!")
 doctest.testmod()
 print("TESTING DONE")
+print("BONUS COMPLETED!")
+print()

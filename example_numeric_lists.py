@@ -13,6 +13,9 @@ Uses only Python Standard Library module
 import statistics
 import math
 
+
+
+
 # define a variable with some univariant data
 # (one varabile, many readings)
 score_list = [
@@ -139,6 +142,7 @@ avg = sum / len
 
 # Return a new list soreted in ascending order
 asc_scores = sorted(score_list)
+print(f"Show asc_scores: {asc_scores}")
 
 # Return a new list soreted in descending order
 desc_scores = sorted(score_list, reverse=True)
@@ -187,12 +191,17 @@ lst.remove(item_to_remove)
 
 # Count how many times 111 appears in the list
 ct_of_111 = score_list.count(111)
+print(f"Show Count of 111 {ct_of_111}")
 
 # Sort the list in ascending order using the sort() method
 asc_scores2 = score_list.sort()
+print(f"Show score_list: {score_list}")
+print("Show Sort Ascending")
+print(asc_scores2)
 
 # Sort the list in descending order using the sort() method
 desc_scores2 = score_list.sort(reverse=True)
+print(desc_scores2)
 
 # Copy the list to a new list
 new_scores = score_list.copy()
@@ -234,6 +243,7 @@ doubled_scores = [map(lambda x: x * 2, new_scores)]
 # Map each element to its square root
 # Say "map x to the square root of x" and cast to a list
 sqrt_scores = map(lambda x: math.sqrt(x), new_scores)
+print(sqrt_scores)
 
 # Map each element (radius) to its area
 radius_list = [1, 2, 3, 4, 5]
@@ -278,7 +288,8 @@ numbers = [1, 2, 3, 4]
 squares = [x ** 2 for x in numbers]
 
 print()
-print("Add print statements to the code to see what happens.")
+print(f"Printing area list {area_list}")
 print("Explore enough to understand.")
 print("Then apply what you know to your own domain.")
-print()
+
+

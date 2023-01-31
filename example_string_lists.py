@@ -38,12 +38,13 @@ with open("text_woodchuck.txt", "r") as fileObject:
     list_words = text.split()  # split on whitespace
     unique_words = set(list_words)  # remove duplicates
 
+print(unique_words)
 # Print the count and list of words
 word_ct = len(list_words)
 
 # Print the count and list of unique words
 unique_word_ct = len(unique_words)
-
+print(unique_word_ct)
 
 # Create a random sentence
 # e.g. "The angry dog runs quickly."
@@ -75,7 +76,7 @@ def get_winner_message(userguess, botguess):
             return "You win!"
 
 
-ready_for_continous_game = False  # change this when ready
+ready_for_continous_game = True  # change this when ready
 
 while True:
     if not ready_for_continous_game:

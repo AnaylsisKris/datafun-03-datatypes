@@ -14,3 +14,16 @@ Clone your new repo down to your machine.
 ## Task 3 - Open the Project Locally
 
 Open the project in VS Code. 
+
+
+
+
+# Project Information
+Name: Kristen Finley
+Course: 44-608 Data Analytics Fundamentals
+Date: 30Jan2023
+Domain: Baseball
+Project: 3
+Task: 2
+Task Objective: Editing Markdown Files
+
